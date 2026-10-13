@@ -1,0 +1,57 @@
+.clock-study .case-kicker,
+.clock-study .case-section-head > span,
+.clock-study .case-section-head > div > p {
+  color: #85d8c7;
+}
+
+.clock-study .case-back:hover,
+.clock-study .case-footer a:hover {
+  color: #e8cf94;
+}
+
+.clock-study a:focus-visible {
+  outline-color: #85d8c7;
+}
+
+.clock-study .case-intro-art {
+  opacity: 0.2;
+  object-position: center;
+}
+
+.clock-study .case-intro + .case-section {
+  margin-top: 0;
+}
+
+.clock-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #111315;
+}
+
+.clock-following-art {
+  margin-top: 48px;
+}
+
+.clock-media-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.clock-media-stack {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 36px;
+}
+
+.clock-platform-stack img {
+  aspect-ratio: 2 / 1;
+  object-fit: contain;
+  background: #fff;
+}
+
+@media (max-width: 600px) {
+  .clock-following-art { margin-top: 34px; }
+  .clock-media-pair { grid-template-columns: 1fr; gap: 30px; }
+}

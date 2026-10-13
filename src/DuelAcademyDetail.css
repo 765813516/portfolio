@@ -1,0 +1,95 @@
+.duel-study .case-kicker,
+.duel-study .case-section-head > span,
+.duel-study .case-section-head > div > p {
+  color: #d8b46d;
+}
+
+.duel-study .case-back:hover,
+.duel-study .case-footer a:hover {
+  color: #f3d69b;
+}
+
+.duel-study a:focus-visible {
+  outline-color: #d8b46d;
+}
+
+.duel-study .case-intro + .case-section {
+  margin-top: 0;
+}
+
+.duel-study .case-intro-art {
+  left: auto;
+  width: 78%;
+  opacity: 0.3;
+  object-position: center;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 92%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 92%, transparent);
+}
+
+.duel-study .case-title-logo {
+  width: min(100%, clamp(380px, 40vw, 760px));
+  filter: brightness(0) invert(1);
+}
+
+.duel-study .case-intro h1 span {
+  color: #fff;
+}
+
+.duel-spaced {
+  margin-top: 64px;
+}
+
+.duel-portrait-inset {
+  width: min(640px, 100%);
+  margin: 0 auto;
+}
+
+.duel-scene-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+  margin-top: 64px;
+}
+
+.duel-motion-grid,
+.duel-gameplay-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.duel-motion-grid video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #242327;
+  object-fit: contain;
+}
+
+.duel-gameplay-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+@media (min-width: 601px) and (max-width: 850px) {
+  .duel-gameplay-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .duel-study .case-intro-art { width: 100%; opacity: 0.22; object-position: 56% center; }
+  .duel-spaced { margin-top: 38px; }
+  .duel-scene-pair { grid-template-columns: 1fr; gap: 32px; margin-top: 38px; }
+  .duel-motion-grid { grid-template-columns: 1fr; gap: 32px; }
+  .duel-gameplay-grid {
+    grid-auto-flow: column;
+    grid-auto-columns: 78%;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 12px;
+  }
+  .duel-gameplay-grid .case-figure { scroll-snap-align: start; }
+}

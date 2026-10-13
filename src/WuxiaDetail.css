@@ -1,0 +1,496 @@
+.wuxia-detail {
+  background: #0b1010;
+  color: #f6f7f2;
+}
+
+.wuxia-detail .case-kicker,
+.wuxia-detail .case-section-head > span,
+.wuxia-detail .case-section-head > div > p,
+.wuxia-subhead span {
+  color: #abd2b7;
+}
+
+.wuxia-detail .case-back:hover,
+.wuxia-detail .case-footer a:hover {
+  color: #abd2b7;
+}
+
+.wuxia-detail a:focus-visible {
+  outline-color: #abd2b7;
+}
+
+.wuxia-intro {
+  display: flex;
+  min-height: 460px;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 24px 0 0;
+  padding: 60px 48px 48px;
+  overflow: hidden;
+}
+
+.wuxia-intro .case-intro-art {
+  opacity: 1;
+  object-position: center 34%;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.wuxia-intro::after {
+  background: linear-gradient(to bottom, #0b1010, transparent 22%, transparent 70%, #0b1010), linear-gradient(90deg, rgba(5, 14, 17, 0.98) 0%, rgba(5, 14, 17, 0.83) 38%, rgba(5, 14, 17, 0.11) 100%);
+}
+
+.wuxia-intro h1 {
+  display: block;
+  margin: 18px 0 38px;
+  font-size: 88px;
+}
+
+.wuxia-intro h1 span {
+  display: block;
+  margin-top: 10px;
+  color: #d7e3d9;
+  font-size: 27px;
+}
+
+.wuxia-intro .case-intro-bottom > p {
+  max-width: 540px;
+  font-size: 18px;
+}
+
+.wuxia-intro .case-meta dt {
+  color: #b3c0b9;
+}
+
+.wuxia-chapters {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 24px;
+  border-top: 1px solid rgba(196, 216, 201, 0.24);
+  border-bottom: 1px solid rgba(196, 216, 201, 0.24);
+}
+
+.wuxia-chapters + .case-section {
+  margin-top: 28px;
+}
+
+.wuxia-chapters a {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: #dbe3dc;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.wuxia-chapters a + a {
+  border-left: 1px solid rgba(196, 216, 201, 0.16);
+}
+
+.wuxia-chapters a:hover,
+.wuxia-chapters a:focus-visible {
+  color: #fff;
+  background: rgba(171, 210, 183, 0.12);
+}
+
+.wuxia-chapters span {
+  color: #abd2b7;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 11px;
+}
+
+.wuxia-grid {
+  display: grid;
+  gap: 22px;
+  align-items: start;
+}
+
+.wuxia-figure {
+  min-width: 0;
+}
+
+.wuxia-stage {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #f5f5f2;
+  color: #0b1010;
+  text-decoration: none;
+}
+
+.wuxia-stage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f5f5f2;
+}
+
+.wuxia-zoom-icon {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 34px;
+  height: 34px;
+  padding: 8px;
+  background: rgba(9, 17, 16, 0.82);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.wuxia-stage:hover .wuxia-zoom-icon,
+.wuxia-stage:focus-visible .wuxia-zoom-icon {
+  opacity: 1;
+}
+
+.wuxia-art-campaign .wuxia-stage img {
+  height: auto;
+}
+
+.wuxia-campaign-layout {
+  grid-template-columns: minmax(0, 4.5fr) minmax(0, 1fr);
+}
+
+.wuxia-campaign-side {
+  display: grid;
+  gap: 14px;
+  align-items: start;
+}
+
+.wuxia-campaign-side .wuxia-stage img {
+  height: auto;
+}
+
+.wuxia-game-icon {
+  width: min(58%, 112px);
+  justify-self: center;
+}
+
+.wuxia-game-icon .wuxia-stage {
+  aspect-ratio: 1;
+}
+
+.wuxia-game-icon .wuxia-stage,
+.wuxia-game-icon .wuxia-stage img {
+  background: transparent;
+}
+
+.wuxia-art-subhead,
+.wuxia-gallery-subhead {
+  margin: 48px 0 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(196, 216, 201, 0.2);
+}
+
+.wuxia-skin-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wuxia-skin-grid .wuxia-stage {
+  aspect-ratio: 1;
+}
+
+.wuxia-skin {
+  min-width: 0;
+}
+
+.wuxia-skin-in-game {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(196, 216, 201, 0.2);
+}
+
+.wuxia-skin-in-game .wuxia-stage {
+  aspect-ratio: 1179 / 2556;
+}
+
+.wuxia-character-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wuxia-character {
+  min-width: 0;
+}
+
+.wuxia-character > .wuxia-figure:first-child .wuxia-stage {
+  aspect-ratio: 1;
+}
+
+.wuxia-art-in-game {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(196, 216, 201, 0.2);
+}
+
+.wuxia-art-in-game .wuxia-stage {
+  aspect-ratio: 1 / 1.85;
+}
+
+.wuxia-art-in-game .wuxia-stage img {
+  object-fit: cover;
+}
+
+.wuxia-art-in-game-xiaolongnv .wuxia-stage img {
+  transform: scale(1.18);
+  transform-origin: right center;
+}
+
+.wuxia-art-in-game-zhaomin .wuxia-stage img {
+  transform: scale(1.25);
+}
+
+.wuxia-subsection + .wuxia-subsection {
+  margin-top: 84px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(196, 216, 201, 0.2);
+}
+
+.wuxia-subhead {
+  margin-bottom: 24px;
+}
+
+.wuxia-subhead span {
+  font: 700 12px ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.wuxia-subhead h3 {
+  margin: 10px 0 0;
+  font-size: 27px;
+  font-weight: 650;
+}
+
+.wuxia-chibi-grid,
+.wuxia-icon-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.wuxia-chibi-grid .wuxia-stage,
+.wuxia-icon-grid .wuxia-stage {
+  aspect-ratio: 1;
+}
+
+.wuxia-companion {
+  min-width: 0;
+}
+
+.wuxia-motion {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(196, 216, 201, 0.2);
+}
+
+.wuxia-motion .wuxia-stage {
+  aspect-ratio: auto;
+  height: 210px;
+}
+
+.wuxia-motion .wuxia-stage,
+.wuxia-motion .wuxia-stage img {
+  background: #555a57;
+}
+
+.wuxia-motion-mirrored .wuxia-stage img {
+  transform: scaleX(-1);
+}
+
+.wuxia-motion figcaption {
+  color: #abd2b7;
+  font-size: 12px;
+}
+
+.wuxia-guoxiang-grid {
+  grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr);
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(196, 216, 201, 0.2);
+}
+
+.wuxia-guoxiang-motion .wuxia-stage {
+  height: 440px;
+}
+
+.wuxia-guoxiang-motion .wuxia-stage,
+.wuxia-guoxiang-motion .wuxia-stage img {
+  background: #555a57;
+}
+
+.wuxia-guoxiang-action {
+  align-self: center;
+}
+
+.wuxia-guoxiang-action .wuxia-stage,
+.wuxia-guoxiang-action .wuxia-stage img {
+  background: #9c9c9c;
+}
+
+.wuxia-guoxiang-action .wuxia-stage img {
+  height: auto;
+}
+
+.wuxia-companion-promo-head {
+  margin: 48px 0 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(196, 216, 201, 0.2);
+}
+
+.wuxia-companion-promo-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.wuxia-companion-promo-grid .wuxia-stage {
+  aspect-ratio: 480 / 853;
+}
+
+.wuxia-pet-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wuxia-pet-motion-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wuxia-pet-motion-grid video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #111718;
+}
+
+.wuxia-gift-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wuxia-pet-grid .wuxia-stage {
+  aspect-ratio: 1300 / 1823;
+}
+
+.wuxia-pet-cropped .wuxia-stage img {
+  object-fit: cover;
+  transform: scale(1.08);
+}
+
+.wuxia-pet-grid .wuxia-stage img,
+.wuxia-screen-grid .wuxia-stage img,
+.wuxia-gift-grid .wuxia-stage img {
+  background: #111718;
+}
+
+.wuxia-sheet-list {
+  display: grid;
+  gap: 32px;
+}
+
+.wuxia-sheet .wuxia-stage img {
+  height: auto;
+}
+
+.wuxia-monster-game-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 920px;
+  margin: 42px auto 0;
+}
+
+.wuxia-monster-game .wuxia-stage {
+  aspect-ratio: 1179 / 2556;
+}
+
+.wuxia-screen-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wuxia-screen-grid .wuxia-stage {
+  height: 690px;
+}
+
+.wuxia-gift-grid .wuxia-stage {
+  height: 640px;
+}
+
+.wuxia-icon-grid {
+  gap: 26px 18px;
+}
+
+.wuxia-icon-grid .case-figure figcaption {
+  color: #c2ccc3;
+}
+
+.wuxia-golden-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.wuxia-golden-grid .wuxia-stage {
+  aspect-ratio: 3 / 4;
+  background: #351912;
+}
+
+.wuxia-golden-grid .wuxia-stage img {
+  background: #351912;
+}
+
+@media (max-width: 900px) {
+  .wuxia-intro { min-height: 480px; }
+  .wuxia-intro h1 { font-size: 70px; }
+  .wuxia-campaign-layout { grid-template-columns: 1fr; }
+  .wuxia-campaign-side { width: min(100%, 260px); justify-self: center; }
+  .wuxia-chapters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .wuxia-chapters a:nth-child(4) { border-left: 0; }
+  .wuxia-chapters a:nth-child(n+4) { border-top: 1px solid rgba(196, 216, 201, 0.16); }
+  .wuxia-chibi-grid,
+  .wuxia-icon-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .wuxia-pet-grid,
+  .wuxia-gift-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .wuxia-intro {
+    min-height: 500px;
+    margin-top: 16px;
+    padding: 30px 20px;
+  }
+  .wuxia-intro .case-intro-art { object-position: 66% center; }
+  .wuxia-intro::after { background: linear-gradient(to bottom, #0b1010, transparent 20%, transparent 65%, #0b1010), linear-gradient(0deg, rgba(5, 14, 17, 0.98) 0%, rgba(5, 14, 17, 0.82) 42%, rgba(5, 14, 17, 0.04) 100%); }
+  .wuxia-intro h1 { margin: 16px 0 28px; font-size: 50px; }
+  .wuxia-intro h1 span { font-size: 21px; }
+  .wuxia-intro .case-intro-bottom > p { font-size: 16px; }
+  .wuxia-intro .case-meta { gap: 12px; }
+  .wuxia-intro .case-meta dd { font-size: 12px; }
+  .wuxia-chapters {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .wuxia-chapters a {
+    min-width: max-content;
+    min-height: 56px;
+    padding: 10px 14px;
+  }
+  .wuxia-chapters a:nth-child(n) { border-top: 0; }
+  .wuxia-chapters a:nth-child(4) { border-left: 1px solid rgba(196, 216, 201, 0.16); }
+  .wuxia-grid { gap: 22px 12px; }
+  .wuxia-skin-grid,
+  .wuxia-character-grid,
+  .wuxia-companion-promo-grid,
+  .wuxia-pet-grid,
+  .wuxia-pet-motion-grid,
+  .wuxia-screen-grid,
+  .wuxia-gift-grid,
+  .wuxia-golden-grid,
+  .wuxia-guoxiang-grid { grid-template-columns: 1fr; }
+  .wuxia-chibi-grid,
+  .wuxia-icon-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .wuxia-screen-grid .wuxia-stage,
+  .wuxia-gift-grid .wuxia-stage { height: 580px; }
+  .wuxia-subsection + .wuxia-subsection { margin-top: 62px; }
+  .wuxia-subhead h3 { font-size: 24px; }
+  .wuxia-monster-game-grid { grid-template-columns: 1fr; max-width: 440px; }
+  .wuxia-zoom-icon { opacity: 1; }
+}

@@ -1,0 +1,120 @@
+.line-sidebar {
+  --accent-color: #a9e8ff;
+  --text-color: rgba(239, 243, 247, 0.78);
+  --marker-color: rgba(235, 240, 245, 0.28);
+  --marker-length: 46px;
+  --marker-gap: 8px;
+  --tick-scale: 0.44;
+  --max-shift: 24px;
+  --item-gap: 14px;
+  --font-size: 0.78rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.line-sidebar--markers {
+  padding-left: calc(var(--marker-length) + var(--marker-gap));
+}
+
+.line-sidebar__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--item-gap);
+  margin: 0;
+  padding: 0.7rem 0;
+  list-style: none;
+}
+
+.line-sidebar__item {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.line-sidebar__item::before {
+  position: absolute;
+  inset: -6px -34px;
+  content: '';
+}
+
+.line-sidebar__label {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  color: color-mix(in srgb, var(--accent-color) calc(var(--effect, 0) * 100%), var(--text-color));
+  font-size: var(--font-size);
+  line-height: 1.2;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
+  transform: translateX(calc(var(--effect, 0) * var(--max-shift)));
+}
+
+.line-sidebar__index {
+  margin-right: 0.55rem;
+  color: color-mix(in srgb, var(--accent-color) calc(var(--effect, 0) * 100%), rgba(240, 244, 248, 0.58));
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.82em;
+}
+
+.line-sidebar__marker {
+  position: absolute;
+  top: 50%;
+  left: calc(-1 * var(--marker-length) - var(--marker-gap));
+  width: var(--marker-length);
+  height: 1px;
+  background-color: color-mix(in srgb, var(--accent-color) calc(var(--effect, 0) * 100%), var(--marker-color));
+  transform: translateY(-50%) scaleX(calc(0.7 + var(--effect, 0) * 0.5));
+  transform-origin: left center;
+}
+
+.line-sidebar--markers .line-sidebar__item:not(:last-child)::after {
+  position: absolute;
+  top: calc(100% + var(--item-gap) / 2);
+  left: calc(-1 * var(--marker-length) - var(--marker-gap));
+  width: calc(var(--marker-length) * var(--tick-scale));
+  height: 1px;
+  background-color: var(--marker-color);
+  content: '';
+  opacity: 0.5;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.line-sidebar--scale-tick .line-sidebar__item:not(:last-child)::after {
+  transform: translateY(-50%) scaleX(calc(0.7 + var(--effect, 0) * 0.6));
+}
+
+.line-sidebar__item:hover .line-sidebar__label,
+.line-sidebar__item:focus-visible .line-sidebar__label,
+.line-sidebar__item[aria-current='true'] .line-sidebar__label {
+  text-shadow: 0 0 16px color-mix(in srgb, var(--accent-color) 72%, transparent), 0 2px 14px rgba(0, 0, 0, 0.8);
+}
+
+.line-sidebar__item:focus-visible .line-sidebar__label {
+  outline: 1px solid rgba(220, 244, 255, 0.72);
+  outline-offset: 5px;
+}
+
+@media (max-width: 1180px) {
+  .hero-line-sidebar {
+    left: -20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-line-sidebar {
+    bottom: 128px;
+    left: -16px;
+    transform: scale(0.86);
+    transform-origin: left bottom;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line-sidebar__label,
+  .line-sidebar__marker,
+  .line-sidebar--scale-tick .line-sidebar__item:not(:last-child)::after {
+    transition: none;
+  }
+}

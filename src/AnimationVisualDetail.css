@@ -1,0 +1,164 @@
+.animation-study {
+  --animation-accent: #dfabc3;
+  background: #0b0b0e;
+}
+
+.animation-study .case-kicker,
+.animation-study .case-back:hover,
+.animation-study .case-footer a:hover {
+  color: var(--animation-accent);
+}
+
+.animation-study :is(a, button, .comic-scroll):focus-visible {
+  outline: 2px solid var(--animation-accent);
+  outline-offset: 3px;
+}
+
+.animation-study button { font: inherit; cursor: pointer; }
+.animation-study button:disabled { opacity: 0.35; cursor: default; }
+.animation-study .animation-intro { padding: 78px 0 60px; }
+.animation-study .case-intro-art { opacity: 0.4; object-position: center 62%; }
+.animation-study .case-intro::after { background: linear-gradient(90deg, #0b0b0e 0%, rgba(11, 11, 14, 0.66) 50%, transparent); }
+.animation-study .case-intro h1 { font-size: 72px; margin: 20px 0 28px; }
+.animation-intro-copy { margin: 0; color: #cbccd2; font-size: 19px; line-height: 1.8; }
+
+.animation-index {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: #0b0b0e;
+  border-block: 1px solid #353439;
+}
+
+.animation-index a { display: flex; align-items: center; gap: 16px; min-height: 68px; padding: 14px 24px; border-right: 1px solid #353439; font-size: 18px; font-weight: 700; }
+.animation-index a:first-child { padding-left: 0; }
+.animation-index a:last-child { border-right: 0; }
+.animation-index a:hover { color: var(--animation-accent); }
+.animation-index span { color: var(--animation-accent); font: 12px ui-monospace, Consolas, monospace; }
+.animation-index small { margin-left: auto; color: #97979f; font-size: 12px; font-weight: 400; }
+.animation-section { scroll-margin-top: 94px; }
+.animation-study #feitian { margin-top: 64px; }
+.animation-section-head { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 28px; }
+.animation-section-head > div > span { color: var(--animation-accent); font: 12px ui-monospace, Consolas, monospace; }
+.animation-section-head h2 { margin: 10px 0 12px; font-size: 44px; line-height: 1.15; }
+.animation-section-head p { max-width: 640px; margin: 0; color: #aaabb4; font-size: 15px; line-height: 1.8; }
+.animation-count { color: #9c9ca6; font-size: 12px; }
+.animation-episodes { display: grid; gap: 48px; }
+.animation-episode { min-width: 0; scroll-margin-top: 94px; }
+.animation-episode + .animation-episode { padding-top: 40px; border-top: 1px solid #353439; }
+.animation-episode > h3 { margin: 0 0 20px; color: #e9e5ed; font-size: 24px; font-weight: 600; line-height: 1.4; }
+
+.animation-pair { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 30px; align-items: start; }
+.animation-single { max-width: 1040px; margin: 0 auto; }
+.animation-single > .animation-media-comic { max-width: 800px; margin: 0 auto; }
+.animation-media { min-width: 0; }
+.animation-media > h4 { margin: 0 0 14px; padding-left: 12px; border-left: 3px solid var(--animation-accent); color: #f3f0f3; font-size: 18px; font-weight: 700; line-height: 1.25; }
+.comic-reader { border: 1px solid #45414b; border-radius: 6px; overflow: hidden; background: #141318; }
+.comic-toolbar { display: flex; align-items: center; justify-content: space-between; min-height: 54px; padding: 8px 12px; gap: 12px; border-bottom: 1px solid #39353f; }
+.comic-toolbar > span { display: flex; align-items: center; gap: 8px; min-width: 0; font-size: 13px; color: #ece9ee; }
+.comic-toolbar > span svg { flex: none; color: var(--animation-accent); }
+.comic-tools { display: flex; align-items: center; flex: none; gap: 2px; }
+.comic-tools button { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 3px; background: transparent; color: #c4c1ca; }
+.comic-tools button:hover:not(:disabled) { color: #fff; background: #38313c; }
+.comic-tools output { width: 38px; text-align: center; color: #a8a3b0; font: 11px ui-monospace, Consolas, monospace; }
+.comic-scroll { height: min(68vh, 620px); min-height: 380px; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #847087 #1a171e; cursor: grab; touch-action: pan-x pan-y; scroll-behavior: auto; }
+.comic-scroll.is-dragging { cursor: grabbing; user-select: none; }
+.comic-canvas { min-width: 100%; }
+.comic-canvas img, .beidou-strip img { display: block; width: 100%; height: auto; user-select: none; }
+.animation-film { min-width: 0; margin: 0; }
+.animation-film-frame { position: relative; }
+.film-start { position: absolute; inset: 0; width: 100%; display: grid; place-items: center; border: 0; background: transparent; color: #fff; }
+.film-start > span { display: grid; place-items: center; width: 68px; height: 68px; padding-left: 4px; border: 1px solid rgba(255, 255, 255, 0.65); border-radius: 50%; background: rgba(15, 12, 19, 0.72); transition: background 180ms ease; }
+.film-start:hover > span { background: #423245; }
+.animation-study .film-start:focus-visible { outline-offset: -4px; }
+.animation-film figcaption { display: flex; justify-content: space-between; align-items: center; min-height: 55px; padding-bottom: 14px; color: #aaa6b2; font-size: 13px; }
+.animation-film figcaption span:last-child { font-family: ui-monospace, Consolas, monospace; font-size: 12px; }
+.animation-film video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #000; border: 1px solid #39353f; border-radius: 4px; }
+.film-error { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; color: #e2bdc6; font-size: 14px; }
+.film-error button { border: 1px solid #666; padding: 5px 10px; border-radius: 3px; background: transparent; color: #fff; }
+.film-error a { display: inline-flex; align-items: center; gap: 4px; text-decoration: underline; }
+
+.beidou-page { width: min(820px, 100%); margin: 40px auto 0; }
+.beidou-page-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 16px; padding-top: 24px; border-top: 1px solid #45414b; }
+.beidou-page-head div > span, .beidou-page-head > span { color: #aaa6b2; font: 12px ui-monospace, Consolas, monospace; }
+.beidou-page-head h3 { margin: 6px 0 0; font-size: 24px; line-height: 1.3; }
+.beidou-strip { background: #070708; }
+.beidou-chapter-nav { display: flex; justify-content: flex-end; padding-top: 12px; }
+.beidou-chapter-nav > div { display: flex; flex-wrap: wrap; gap: 10px; }
+.beidou-chapter-nav button { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 48px; padding: 0 18px; border: 1px solid #665967; border-radius: 4px; color: #ece9ee; background: transparent; font-size: 14px; font-weight: 600; }
+.beidou-chapter-nav button:hover { border-color: var(--animation-accent); color: var(--animation-accent); }
+.beidou-chapter-nav .beidou-next { border-color: var(--animation-accent); background: var(--animation-accent); color: #171119; }
+.beidou-chapter-nav .beidou-next:hover { background: #f0bed3; color: #171119; }
+
+.mujika-stage { margin-top: 72px; }
+.mujika-stage-head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 20px; }
+.mujika-stage-head > span { color: var(--animation-accent); font: 12px ui-monospace, Consolas, monospace; }
+.mujika-stage-head h3 { margin: 0; font-size: 24px; font-weight: 600; line-height: 1.3; }
+.mujika-stage-head a { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; color: var(--animation-accent); font-size: 13px; font-weight: 600; }
+.mujika-stage-head a:hover { color: #f2cadb; }
+.mujika-concept-pages, .mujika-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.mujika-concept-pages a, .mujika-board, .mujika-gallery a { display: block; min-width: 0; }
+.mujika-concept-pages img, .mujika-board img, .mujika-gallery img { display: block; width: 100%; height: auto; background: #17161a; }
+.mujika-gallery figure { min-width: 0; margin: 0; }
+.mujika-gallery figure:first-child, .mujika-gallery figure:last-child { grid-column: 1 / -1; }
+.mujika-gallery figcaption { padding-top: 10px; color: #a9a7ae; font-size: 12px; }
+.mujika-video { width: min(1100px, 100%); margin: 0 auto; }
+.mujika-finale .animation-film figcaption { min-height: 42px; }
+.comic-dialog { width: min(1000px, calc(100% - 32px)); max-width: none; max-height: none; padding: 0; border: 0; border-radius: 6px; color: #f6f5f2; background: #141318; }
+.comic-dialog::backdrop { background: rgba(0, 0, 0, 0.87); }
+.comic-dialog .comic-toolbar { min-height: 58px; }
+.comic-dialog .comic-scroll { height: calc(92dvh - 58px); min-height: 0; }
+.comic-dialog .comic-canvas { max-width: none; }
+
+@media (max-width: 1000px) {
+  .animation-pair { gap: 22px; }
+  .animation-index small { display: none; }
+  .comic-toolbar { flex-wrap: wrap; gap: 4px; }
+  .comic-tools { margin-left: auto; }
+  .animation-study .case-intro h1 { font-size: 60px; }
+}
+
+@media (max-width: 760px) {
+  .animation-pair { grid-template-columns: 1fr; gap: 24px; }
+  .animation-section-head { align-items: start; flex-direction: column; gap: 22px; }
+  .comic-toolbar { flex-wrap: nowrap; }
+  .comic-scroll { height: 480px; min-height: 0; }
+}
+
+@media (max-width: 600px) {
+  .animation-study .animation-intro { padding: 54px 0 44px; }
+  .animation-study .case-intro h1 { font-size: 42px; }
+  .animation-intro-copy { font-size: 15px; }
+  .animation-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .animation-index a { gap: 10px; min-height: 50px; padding: 10px 12px; font-size: 15px; }
+  .animation-index a:first-child { padding-left: 12px; }
+  .animation-index a:nth-child(2) { border-right: 0; }
+  .animation-index a:nth-child(-n+2) { border-bottom: 1px solid #353439; }
+  .animation-section { scroll-margin-top: 120px; }
+  .animation-episodes { gap: 32px; }
+  .animation-episode { scroll-margin-top: 120px; }
+  .animation-episode + .animation-episode { padding-top: 32px; }
+  .animation-episode > h3 { font-size: 21px; margin-bottom: 16px; }
+  .animation-section-head h2 { font-size: 36px; }
+  .comic-toolbar { gap: 8px; padding: 8px; }
+  .comic-tools { gap: 0; }
+  .comic-tools button { width: 30px; height: 34px; }
+  .comic-tools output { width: 34px; }
+  .beidou-page { margin-top: 24px; }
+  .beidou-chapter-nav > div { justify-content: flex-end; }
+  .mujika-stage { margin-top: 52px; }
+  .mujika-stage-head { flex-wrap: wrap; gap: 10px 12px; }
+  .mujika-stage-head h3 { font-size: 21px; }
+  .mujika-stage-head a { width: 100%; margin-left: 0; }
+  .mujika-concept-pages, .mujika-gallery { grid-template-columns: 1fr; gap: 16px; }
+  .mujika-gallery figure:first-child, .mujika-gallery figure:last-child { grid-column: auto; }
+  .comic-dialog { width: calc(100% - 16px); }
+  .comic-dialog .comic-toolbar { flex-wrap: wrap; }
+  .comic-dialog .comic-scroll { height: calc(88dvh - 76px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animation-study * { scroll-behavior: auto !important; transition: none !important; }
+}

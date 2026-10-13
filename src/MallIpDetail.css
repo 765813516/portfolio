@@ -1,0 +1,315 @@
+.mallip-study {
+  --mallip-accent: #6fc3c9;
+  background: #08090b;
+}
+
+.mallip-study .case-intro {
+  padding: 84px 0 64px;
+}
+
+.mallip-study .case-intro-art {
+  object-position: center 46%;
+  opacity: 0.26;
+}
+
+.mallip-study .case-intro::after {
+  background: linear-gradient(90deg, #08090b 0%, rgba(8, 9, 11, 0.76) 48%, transparent 100%);
+}
+
+.mallip-study .case-kicker,
+.mallip-study .case-section-head > span,
+.mallip-study .case-section-head > div > p,
+.mallip-study .mallip-subhead > span {
+  color: var(--mallip-accent);
+}
+
+.mallip-study .case-intro h1 {
+  margin-bottom: 42px;
+}
+
+.mallip-study .case-intro h1 span {
+  font-size: 27px;
+}
+
+.mallip-study .case-back:hover,
+.mallip-study .case-footer a:hover {
+  color: var(--mallip-accent);
+}
+
+.mallip-study a:focus-visible {
+  outline-color: var(--mallip-accent);
+}
+
+/* 六章节导航 */
+.mallip-chapters {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  border-block: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(8, 9, 11, 0.97);
+  backdrop-filter: blur(12px);
+}
+
+.mallip-chapters a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 62px;
+  padding: 10px 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.13);
+  color: #dfdfe2;
+  font-size: 14px;
+  font-weight: 650;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.mallip-chapters a:first-child {
+  padding-left: 0;
+}
+
+.mallip-chapters a:last-child {
+  border-right: 0;
+}
+
+.mallip-chapters a:hover {
+  color: #fff;
+  background: rgba(111, 195, 201, 0.1);
+}
+
+.mallip-chapters span {
+  color: var(--mallip-accent);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 12px;
+}
+
+.mallip-study .case-section {
+  scroll-margin-top: 78px;
+}
+
+.mallip-study #ip-character {
+  margin-top: 64px;
+}
+
+/* 图块通用 */
+.mallip-study .case-figure a {
+  display: block;
+  overflow: hidden;
+}
+
+.mallip-study .case-figure img {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: border-color 180ms ease;
+}
+
+.mallip-study .case-figure a:hover img,
+.mallip-study .case-figure a:focus-visible img {
+  border-color: rgba(111, 195, 201, 0.75);
+}
+
+.mallip-study .case-figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.mallip-study .case-figure figcaption svg {
+  flex: none;
+  color: var(--mallip-accent);
+}
+
+/* 竖版主图：居中收窄，参照决斗学院的 portrait-inset */
+.mallip-portrait-inset {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+/* 栅格 */
+.mallip-grid-3,
+.mallip-grid-4,
+.mallip-grid-5 {
+  display: grid;
+  gap: 18px;
+  align-items: start;
+  margin-top: 28px;
+}
+
+.mallip-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.mallip-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.mallip-grid-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+.mallip-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+  margin-top: 28px;
+}
+
+/* 对比排版变体：竖版 4:5（公仔实体 vs 打样），横版 4:3（吧唧实物 vs 现场照） */
+.mallip-pair-tall .case-figure img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.mallip-pair-wide .case-figure img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* 手持特写引图 */
+.mallip-photo-lead {
+  margin-top: 28px;
+}
+
+.mallip-spaced {
+  margin-top: 28px;
+}
+
+/* 小节副标题：参照玩仓的 materials-head */
+.mallip-subhead {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin: 80px 0 26px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.mallip-subhead > span {
+  flex: none;
+  font: 700 12px ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.mallip-subhead h3 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.3;
+}
+
+/* 表情包条：透明底贴纸，暗色瓷砖衬托 */
+.mallip-expr-strip {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.mallip-expr-strip figure {
+  margin: 0;
+}
+
+.mallip-expr-strip a {
+  display: grid;
+  place-items: center;
+  padding: 14px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.mallip-expr-strip a:hover,
+.mallip-expr-strip a:focus-visible {
+  border-color: rgba(111, 195, 201, 0.6);
+  background: rgba(111, 195, 201, 0.07);
+}
+
+.mallip-expr-strip img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mallip-expr-strip figcaption {
+  padding-top: 8px;
+  color: #969999;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* 超长物料：三栏并排，展示顶部、点击看全图 */
+.mallip-strip-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.mallip-strip-row .case-figure img {
+  max-height: 560px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* 动态视觉：开屏竖版视频 + 外屏现场照（按固有比例天然等高） */
+.mallip-motion-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.06fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.mallip-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #101214;
+}
+
+.mallip-video-lead {
+  margin-top: 28px;
+}
+
+/* 周边主推：徽章 + 档案袋设计稿 */
+.mallip-merch-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 1080px) {
+  .mallip-grid-5 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .mallip-expr-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .mallip-merch-lead { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 860px) {
+  .mallip-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mallip-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mallip-motion-row { grid-template-columns: 1fr; }
+  .mallip-strip-row .case-figure img { max-height: 460px; }
+}
+
+@media (max-width: 600px) {
+  .mallip-study .case-intro { padding: 60px 0 46px; }
+  .mallip-study .case-intro h1 span { font-size: 21px; }
+  .mallip-chapters {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .mallip-chapters::-webkit-scrollbar { display: none; }
+  .mallip-chapters a { flex: none; min-height: 56px; padding: 8px 16px; white-space: nowrap; }
+  .mallip-chapters a:first-child { padding-left: 0; }
+  .mallip-study .case-section { scroll-margin-top: 68px; }
+  .mallip-study #ip-character { margin-top: 48px; }
+  .mallip-portrait-inset { width: 100%; }
+  .mallip-grid-3,
+  .mallip-grid-4,
+  .mallip-grid-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .mallip-pair { grid-template-columns: 1fr; gap: 26px; margin-top: 26px; }
+  .mallip-motion-row { grid-template-columns: 1fr; gap: 26px; margin-top: 26px; }
+  .mallip-grid-3, .mallip-grid-4, .mallip-grid-5 { margin-top: 26px; }
+  .mallip-expr-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .mallip-subhead { gap: 14px; margin-top: 60px; }
+  .mallip-subhead h3 { font-size: 22px; }
+  .mallip-strip-row { grid-template-columns: 1fr; gap: 26px; }
+  .mallip-strip-row .case-figure img { max-height: 420px; }
+  .mallip-merch-lead { grid-template-columns: 1fr; gap: 26px; }
+  .mallip-spaced { margin-top: 26px; }
+}

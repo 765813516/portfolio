@@ -1,0 +1,15 @@
+node_modules
+dist
+.DS_Store
+*.local
+
+# 工作产物与个人文件，不入库
+tmp/
+.codex/
+.workbuddy/
+.agents/
+*.log
+vite-dev*.log
+/*.png
+/*.jpg
+/*.psd
